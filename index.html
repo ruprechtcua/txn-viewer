@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script data-main="app/config" src="node_modules/requirejs/require.js"></script>
+    </head>
+    <body>
+        <h1>Txn-Viewer</h1>
+        <div>1. Open chrome console</div>
+        <div>2. console: account.getTransactions()</div>
+        <div>3. console: account.balance()</div>
+        <div>4. console: account.addTransaction(100,'BP','1/1/2015','sample')</div>
+        <div>5. console: account.getTransactionsByTypes(['BP','IT'])</div>
+        <div>6. console: account.getTransactionsByDateRange('1/1/2015','2/1/2015')</div>
+
+        <p>
+			Javascript purely logic based, no UI is implemented.
+			<br/><br/>
+			Assumptions<br/>
+			- the rest of the transactions require an amount, type, date and description. <br/>
+			- transaction type can only be these 3 types (BP, FT, IT)<br/>
+			- invalid transaction type will default to empty ''<br/>
+			- display amount will round down to 2 decimal places<br/>
+			- empty amount will default to 0<br/>
+			- empty or invalid date will default to empty ''<br/>
+			- display date format will be DD/MM/YY 01/01/2015<br/>
+			- no sorting implementation<br/>
+			- the app is for development and it not ready for production use<br/>
+        </p>
+    </body>
+</html>
